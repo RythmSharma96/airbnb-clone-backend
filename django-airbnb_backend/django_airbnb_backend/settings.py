@@ -73,6 +73,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://localhost:3000',
+    'http://65.1.100.189',
+    'http://65.1.100.189:1337'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
