@@ -39,7 +39,11 @@ AUTH_USER_MODEL = 'useraccount.User'
 
 SITE_ID = '1'
 
-WEBSITE_URL = 'http://localhost:8000'
+
+if DEBUG:
+    WEBSITE_URL = 'http://localhost:8000'
+else:
+    WEBSITE_URL = 'http://65.1.100.189:1337'
 
 SIMPLE_JWT = {
      "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
