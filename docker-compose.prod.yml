@@ -8,13 +8,13 @@ services:
     depends_on:
       - web
     volumes:
-      - media_volume:/usr/src/django-airbnb_backend/media
+      - media_volume:/usr/src/django_airbnb_backend/media
   web:
     build: ./django-airbnb_backend
     command: gunicorn django_airbnb_backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./django-airbnb_backend/:/usr/src/django_airbnb_backend
-      - media_volume:/usr/src/django-airbnb_backend/media
+      - media_volume:/usr/src/django_airbnb_backend/media
     expose:
       - 8000
     env_file:
